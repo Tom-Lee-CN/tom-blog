@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" class="dark" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress {{ version }}">
+    <script>
+      // 提前设置暗色模式，避免页面加载时闪烁白色
+      // 默认暗色（黑色底色），除非用户明确选择过亮色
+      (function () {
+        var saved = null;
+        try { saved = localStorage.getItem('vuepress-color-scheme'); } catch (e) {}
+        var dark = saved !== 'light';
+        var root = document.documentElement;
+        root.classList.toggle('dark', dark);
+        // 设置 data-theme 属性（Shiki 双主题切换依赖此属性）
+        if (dark) {
+          root.setAttribute('data-theme', 'dark');
+        } else {
+          root.removeAttribute('data-theme');
+        }
+        // 直接设置 html 背景色，避免 CSS 加载前闪烁白色
+        root.style.backgroundColor = dark ? '#1a1d23' : '#ffffff';
+      })();
+    </script>
+    <!--vuepress-ssr-head-->
+    <!--vuepress-ssr-styles-->
+    <!--vuepress-ssr-preload-->
+    <!--vuepress-ssr-prefetch-->
+  </head>
+  <body>
+    <div id="app"><!--vuepress-ssr-content--></div>
+    <!--vuepress-ssr-scripts-->
+  </body>
+</html>

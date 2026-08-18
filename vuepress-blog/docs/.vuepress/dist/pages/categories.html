@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-rc.31">
+    <script>
+      // 提前设置暗色模式，避免页面加载时闪烁白色
+      // 默认暗色（黑色底色），除非用户明确选择过亮色
+      (function () {
+        var saved = null;
+        try { saved = localStorage.getItem('vuepress-color-scheme'); } catch (e) {}
+        var dark = saved !== 'light';
+        var root = document.documentElement;
+        root.classList.toggle('dark', dark);
+        // 设置 data-theme 属性（Shiki 双主题切换依赖此属性）
+        if (dark) {
+          root.setAttribute('data-theme', 'dark');
+        } else {
+          root.removeAttribute('data-theme');
+        }
+        // 直接设置 html 背景色，避免 CSS 加载前闪烁白色
+        root.style.backgroundColor = dark ? '#1a1d23' : '#ffffff';
+      })();
+    </script>
+    <link rel="icon" href="/favicon.svg"><title>分类 | 码霖汤姆的博客</title><meta name="description" content="个人技术博客">
+    <link rel="preload" href="/assets/style-OMJrl3Bz.css" as="style"><link rel="stylesheet" href="/assets/style-OMJrl3Bz.css">
+    <link rel="modulepreload" href="/assets/app-D6YNM6xz.js"><link rel="modulepreload" href="/assets/categories-BSfcaefP.js">
+    
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="minimal-layout" data-v-6a9294fd><div class="minimal-lock" data-v-6a9294fd><div class="minimal-lock-card" data-v-6a9294fd><h1 class="minimal-lock-title" data-v-6a9294fd>码霖汤姆的博客</h1><p class="minimal-lock-desc" data-v-6a9294fd>请输入访问密码</p><form class="minimal-lock-form" data-v-6a9294fd><input value="" type="password" class="minimal-lock-input" placeholder="访问密码" autocomplete="off" autofocus data-v-6a9294fd><button type="submit" class="minimal-lock-btn" data-v-6a9294fd>进入</button></form><!----><p class="minimal-lock-contact" data-v-6a9294fd>忘记密码？请输入博主的手机号</p></div></div><header class="minimal-header" data-v-6a9294fd><div class="minimal-header-inner" data-v-6a9294fd><a class="minimal-brand" href="/" data-v-6a9294fd><img src="/logo.svg" alt="码霖汤姆的博客" class="minimal-logo" data-v-6a9294fd><span class="minimal-brand-name" data-v-6a9294fd>码霖汤姆的博客</span></a><nav class="minimal-nav" data-v-6a9294fd><!--[--><a href="/" class="minimal-nav-link" data-v-6a9294fd>首页</a><a href="/pages/archive" class="minimal-nav-link" data-v-6a9294fd>归档</a><a href="/pages/categories" class="active minimal-nav-link" data-v-6a9294fd>分类</a><a href="/pages/tags" class="minimal-nav-link" data-v-6a9294fd>标签</a><a href="/pages/about" class="minimal-nav-link" data-v-6a9294fd>关于</a><!--]--></nav><button type="button" class="minimal-theme-toggle" aria-label="切换到暗色" data-v-6a9294fd>☾</button></div></header><main class="minimal-main" data-v-6a9294fd><div class="minimal-content" data-v-6a9294fd><div data-v-6a9294fd><h1 id="分类" tabindex="-1"><a class="header-anchor" href="#分类"><span>分类</span></a></h1><p>按分类浏览文章。</p><h2 id="技术" tabindex="-1"><a class="header-anchor" href="#技术"><span>技术</span></a></h2><h3 id="前端" tabindex="-1"><a class="header-anchor" href="#前端"><span>前端</span></a></h3><ul><li><a href="/posts/2026-08-20-vuepress-setup">VuePress 博客搭建指南</a></li></ul><h3 id="工具" tabindex="-1"><a class="header-anchor" href="#工具"><span>工具</span></a></h3><ul><li><a href="/posts/2026-08-21-markdown-guide">Markdown 写作指南</a></li></ul><h3 id="代码演示" tabindex="-1"><a class="header-anchor" href="#代码演示"><span>代码演示</span></a></h3><ul><li><a href="/posts/2026-08-22-code-demo">代码块演示：JavaScript、HTML、CSS、Vue 与 Rust</a></li></ul><h2 id="生活" tabindex="-1"><a class="header-anchor" href="#生活"><span>生活</span></a></h2><ul><li><a href="/posts/2026-08-19-hello-world">Hello World</a></li></ul><hr><h2 id="分类统计" tabindex="-1"><a class="header-anchor" href="#分类统计"><span>分类统计</span></a></h2><table><thead><tr><th>分类</th><th>文章数</th></tr></thead><tbody><tr><td>技术</td><td>3 篇</td></tr><tr><td>生活</td><td>1 篇</td></tr><tr><td><strong>总计</strong></td><td><strong>4 篇</strong></td></tr></tbody></table><hr><p><em>最后更新：2026-08-22</em></p></div></div></main><footer class="minimal-footer" data-v-6a9294fd><div class="minimal-footer-inner" data-v-6a9294fd><p data-v-6a9294fd>© 2026 码霖汤姆的博客</p></div></footer></div><!--[--><!--]--><!--]--></div>
+    <script type="module" src="/assets/app-D6YNM6xz.js" defer></script>
+  </body>
+</html>

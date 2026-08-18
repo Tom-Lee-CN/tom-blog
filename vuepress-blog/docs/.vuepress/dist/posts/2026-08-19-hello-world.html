@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-rc.31">
+    <script>
+      // 提前设置暗色模式，避免页面加载时闪烁白色
+      // 默认暗色（黑色底色），除非用户明确选择过亮色
+      (function () {
+        var saved = null;
+        try { saved = localStorage.getItem('vuepress-color-scheme'); } catch (e) {}
+        var dark = saved !== 'light';
+        var root = document.documentElement;
+        root.classList.toggle('dark', dark);
+        // 设置 data-theme 属性（Shiki 双主题切换依赖此属性）
+        if (dark) {
+          root.setAttribute('data-theme', 'dark');
+        } else {
+          root.removeAttribute('data-theme');
+        }
+        // 直接设置 html 背景色，避免 CSS 加载前闪烁白色
+        root.style.backgroundColor = dark ? '#1a1d23' : '#ffffff';
+      })();
+    </script>
+    <link rel="icon" href="/favicon.svg"><title>Hello World | 码霖汤姆的博客</title><meta name="description" content="我的第一篇博客文章，记录博客搭建的开始">
+    <link rel="preload" href="/assets/style-OMJrl3Bz.css" as="style"><link rel="stylesheet" href="/assets/style-OMJrl3Bz.css">
+    <link rel="modulepreload" href="/assets/app-D6YNM6xz.js"><link rel="modulepreload" href="/assets/2026-08-19-hello-world-DXNsAOrq.js">
+    
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="minimal-layout" data-v-6a9294fd><div class="minimal-lock" data-v-6a9294fd><div class="minimal-lock-card" data-v-6a9294fd><h1 class="minimal-lock-title" data-v-6a9294fd>码霖汤姆的博客</h1><p class="minimal-lock-desc" data-v-6a9294fd>请输入访问密码</p><form class="minimal-lock-form" data-v-6a9294fd><input value="" type="password" class="minimal-lock-input" placeholder="访问密码" autocomplete="off" autofocus data-v-6a9294fd><button type="submit" class="minimal-lock-btn" data-v-6a9294fd>进入</button></form><!----><p class="minimal-lock-contact" data-v-6a9294fd>忘记密码？请输入博主的手机号</p></div></div><header class="minimal-header" data-v-6a9294fd><div class="minimal-header-inner" data-v-6a9294fd><a class="minimal-brand" href="/" data-v-6a9294fd><img src="/logo.svg" alt="码霖汤姆的博客" class="minimal-logo" data-v-6a9294fd><span class="minimal-brand-name" data-v-6a9294fd>码霖汤姆的博客</span></a><nav class="minimal-nav" data-v-6a9294fd><!--[--><a href="/" class="minimal-nav-link" data-v-6a9294fd>首页</a><a href="/pages/archive" class="minimal-nav-link" data-v-6a9294fd>归档</a><a href="/pages/categories" class="minimal-nav-link" data-v-6a9294fd>分类</a><a href="/pages/tags" class="minimal-nav-link" data-v-6a9294fd>标签</a><a href="/pages/about" class="minimal-nav-link" data-v-6a9294fd>关于</a><!--]--></nav><button type="button" class="minimal-theme-toggle" aria-label="切换到暗色" data-v-6a9294fd>☾</button></div></header><main class="minimal-main" data-v-6a9294fd><div class="minimal-content" data-v-6a9294fd><div data-v-6a9294fd><h1 id="hello-world" tabindex="-1"><a class="header-anchor" href="#hello-world"><span>Hello World</span></a></h1><p>这是我的第一篇博客文章。在这个博客中，我将分享前端开发的技术文章和学习笔记。</p><h2 id="为什么写博客" tabindex="-1"><a class="header-anchor" href="#为什么写博客"><span>为什么写博客？</span></a></h2><ol><li><strong>记录学习</strong>：将学到的知识记录下来，方便日后回顾</li><li><strong>分享经验</strong>：帮助其他开发者解决问题</li><li><strong>建立作品集</strong>：展示自己的技术能力</li><li><strong>促进思考</strong>：写作过程能加深理解</li></ol><h2 id="博客技术栈" tabindex="-1"><a class="header-anchor" href="#博客技术栈"><span>博客技术栈</span></a></h2><p>这个博客使用以下技术构建：</p><ul><li><strong>VuePress 2</strong>：基于 Vue 3 的静态网站生成器</li><li><strong>Vue 3</strong>：渐进式 JavaScript 框架</li><li><strong>Vite</strong>：下一代前端构建工具</li><li><strong>Pinia</strong>：Vue 的状态管理库</li><li><strong>GitHub Pages</strong>：免费的静态网站托管</li></ul><h2 id="写作工具" tabindex="-1"><a class="header-anchor" href="#写作工具"><span>写作工具</span></a></h2><p>我使用以下工具来写作：</p><div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-dark:#D4D4D4;--shiki-light:#24292e;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#fff;"><pre class="shiki shiki-themes dark-plus github-light vp-code"><code class="language-bash"><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#6A737D;"># 创建新文章</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#6F42C1;">touch</span><span style="--shiki-dark:#CE9178;--shiki-light:#032F62;"> docs/posts/</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#24292E;">$(</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#6F42C1;">date</span><span style="--shiki-dark:#CE9178;--shiki-light:#032F62;"> +%Y-%m-%d</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#24292E;">)</span><span style="--shiki-dark:#CE9178;--shiki-light:#032F62;">-article-title.md</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#6A737D;"># 本地预览</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#6F42C1;">npm</span><span style="--shiki-dark:#CE9178;--shiki-light:#032F62;"> run</span><span style="--shiki-dark:#CE9178;--shiki-light:#032F62;"> docs:dev</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#6A737D;"># 构建部署</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#6F42C1;">npm</span><span style="--shiki-dark:#CE9178;--shiki-light:#032F62;"> run</span><span style="--shiki-dark:#CE9178;--shiki-light:#032F62;"> docs:build</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="文章格式" tabindex="-1"><a class="header-anchor" href="#文章格式"><span>文章格式</span></a></h2><p>每篇文章都包含 frontmatter 元数据：</p><div class="language-yaml line-numbers-mode" data-highlighter="shiki" data-ext="yaml" style="--shiki-dark:#D4D4D4;--shiki-light:#24292e;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#fff;"><pre class="shiki shiki-themes dark-plus github-light vp-code"><code class="language-yaml"><span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#6F42C1;">---</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#22863A;">title</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#24292E;">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#032F62;">&quot;文章标题&quot;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#22863A;">date</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#24292E;">: </span><span style="--shiki-dark:#D4D4D4;--shiki-light:#005CC5;">2026-08-19</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#22863A;">categories</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#24292E;">: [</span><span style="--shiki-dark:#CE9178;--shiki-light:#032F62;">&quot;分类&quot;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#24292E;">]</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#22863A;">tags</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#24292E;">: [</span><span style="--shiki-dark:#CE9178;--shiki-light:#032F62;">&quot;标签1&quot;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#24292E;">, </span><span style="--shiki-dark:#CE9178;--shiki-light:#032F62;">&quot;标签2&quot;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#24292E;">]</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#22863A;">description</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#24292E;">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#032F62;">&quot;文章摘要&quot;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#22863A;">author</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#24292E;">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#032F62;">&quot;作者&quot;</span></span>
+<span class="line"><span style="--shiki-dark:#569CD6;--shiki-light:#22863A;">cover</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#24292E;">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#032F62;">&quot;/images/cover.jpg&quot;</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#6F42C1;">---</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="下一步计划" tabindex="-1"><a class="header-anchor" href="#下一步计划"><span>下一步计划</span></a></h2><ul><li>[ ] 完善博客主题样式</li><li>[ ] 添加更多技术文章</li><li>[ ] 优化移动端体验</li><li>[ ] 添加搜索功能</li></ul><h2 id="总结" tabindex="-1"><a class="header-anchor" href="#总结"><span>总结</span></a></h2><p>这个博客将记录我的前端开发学习之旅。希望这些文章能帮助到其他开发者，也希望能与大家交流学习。</p><p>如果你有任何问题或建议，欢迎在评论区留言！</p><hr><p><em>最后更新：2026-08-19</em></p></div></div></main><footer class="minimal-footer" data-v-6a9294fd><div class="minimal-footer-inner" data-v-6a9294fd><p data-v-6a9294fd>© 2026 码霖汤姆的博客</p></div></footer></div><!--[--><!--]--><!--]--></div>
+    <script type="module" src="/assets/app-D6YNM6xz.js" defer></script>
+  </body>
+</html>
