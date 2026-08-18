@@ -1,0 +1,72 @@
+{
+    "models": [
+        {
+            "id": "deepseek-v4-flashAAAAA",
+            "name": "DeepSeek V4 Flash",
+            "vendor": "DeepSeek",
+            "url": "https://api.deepseek.com/v1/chat/completions",
+            "apiKey": "sk-f7577816b447494f8d9b1b3f6f5f0263",
+            "maxInputTokens": 999999,
+            "maxOutputTokens": 8192,
+            "supportsToolCall": true,
+            "supportsImages": false
+        },
+        {
+            "id": "deepseek-v4-probbb",
+            "name": "DeepSeek V4 Pro",
+            "vendor": "DeepSeek",
+            "url": "https://api.deepseek.com/v1/chat/completions",
+            "apiKey": "sk-f7577816b447494f8d9b1b3f6f5f0263",
+            "maxInputTokens": 999999,
+            "maxOutputTokens": 8192,
+            "supportsToolCall": true,
+            "supportsImages": false
+        },
+        {
+            "id": "deepseek-v4-flash",
+            "name": "opencode-go-DeepSeek V4 Flash",
+            "vendor": "openai",
+            "url": "https://opencode.ai/zen/go/v1/chat/completions",
+            "apiKey": "sk-VzOylqOuIbeEqBift6nOfpmoK0F3ATI9qWEguOOJL7P9KJMu6rEywCMLZX9O8GYA",
+            "maxInputTokens": 999999,
+            "maxOutputTokens": 8192,
+            "supportsToolCall": true,
+            "supportsImages": false
+        },
+                {
+            "id": "deepseek-v4-pro",
+            "name": "opencode-go-deepseek-v4-pro",
+            "vendor": "openai",
+            "url": "https://opencode.ai/zen/go/v1/chat/completions",
+            "apiKey": "sk-VzOylqOuIbeEqBift6nOfpmoK0F3ATI9qWEguOOJL7P9KJMu6rEywCMLZX9O8GYA",
+            "maxInputTokens": 999999,
+            "maxOutputTokens": 8192,
+            "supportsToolCall": true,
+            "supportsImages": false
+        },
+        {
+            "id": "mimo-v2.5",
+            "name": "opencode-go-mimo-v2.5",
+            "vendor": "openai",
+            "url": "https://opencode.ai/zen/go/v1/chat/completions",
+            "apiKey": "sk-VzOylqOuIbeEqBift6nOfpmoK0F3ATI9qWEguOOJL7P9KJMu6rEywCMLZX9O8GYA",
+            "maxInputTokens": 999999,
+            "maxOutputTokens": 8192,
+            "supportsToolCall": true,
+            "supportsImages": false
+        },
+        {
+            "id": "glm-5.2",
+            "name": "opencode-go-glm-5.2",
+            "vendor": "openai",
+            "url": "https://opencode.ai/zen/go/v1/chat/completions",
+            "apiKey": "sk-VzOylqOuIbeEqBift6nOfpmoK0F3ATI9qWEguOOJL7P9KJMu6rEywCMLZX9O8GYA",
+            "maxInputTokens": 999999,
+            "maxOutputTokens": 8192,
+            "supportsToolCall": true,
+            "supportsImages": true,
+            "supportsReasoning": false
+        }
+    ],
+    "availableModels": ["deepseek-v4-flash", "deepseek-v4-pro", "opencode-go-DeepSeek V4 Flash", "opencode-go-glm-5.2"]
+}
