@@ -24,7 +24,7 @@
     <!-- 顶部极简导航 -->
     <header class="minimal-header">
       <div class="minimal-header-inner">
-        <a class="minimal-brand" href="/">
+        <a class="minimal-brand" :href="base">
           <img v-if="siteLogo" :src="siteLogo" :alt="siteData.title" class="minimal-logo" />
           <span class="minimal-brand-name">{{ siteData.title }}</span>
         </a>
@@ -76,19 +76,20 @@ const { isDark, initDarkMode, toggleDarkMode } = useDarkMode()
 // 站点 logo（themeConfig 可能为空，安全读取，加 base 前缀避免 404）
 const siteLogo = computed(() => siteData.value.themeConfig?.logo || '/tom-blog/logo.svg')
 
-// 固定导航项（极简博客导航）
-const navItems = [
-  { text: '首页', link: '/' },
-  { text: '归档', link: '/pages/archive' },
-  { text: '分类', link: '/pages/categories' },
-  { text: '标签', link: '/pages/tags' },
-  { text: '关于', link: '/pages/about' }
-]
+// 固定导航项（自动拼接 base 前缀，适配部署路径）
+const base = computed(() => siteData.value.base || '/')
+const navItems = computed(() => [
+  { text: '首页', link: base.value },
+  { text: '归档', link: base.value + 'pages/archive' },
+  { text: '分类', link: base.value + 'pages/categories' },
+  { text: '标签', link: base.value + 'pages/tags' },
+  { text: '关于', link: base.value + 'pages/about' }
+])
 
 // 判断当前导航是否激活
 function isActive(link) {
-  if (link === '/') {
-    return route.path === '/'
+  if (link === base.value) {
+    return route.path === base.value || route.path === base.value + 'index.html'
   }
   return route.path.startsWith(link)
 }
