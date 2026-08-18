@@ -26,13 +26,13 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
           cache-dependency-path: vuepress-blog/package-lock.json
 
       - name: Install dependencies
         working-directory: vuepress-blog
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
       - name: Build
         working-directory: vuepress-blog
