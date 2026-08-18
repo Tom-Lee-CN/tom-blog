@@ -23,3 +23,6 @@ npm-debug.log*
 # 本地配置
 .env.local
 .env.*.local
+
+
+.codebuddy
