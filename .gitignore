@@ -1,7 +1,7 @@
 # VuePress 构建输出
-docs/.vuepress/.temp
-docs/.vuepress/.cache
-docs/.vuepress/dist
+**/docs/.vuepress/.temp
+**/docs/.vuepress/.cache
+**/docs/.vuepress/dist
 
 # 依赖目录
 node_modules

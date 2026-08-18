@@ -26,7 +26,8 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: '码霖汤姆的博客',
   description: '个人技术博客',
-  base: '/',
+  // GitHub Pages 项目页部署路径（仓库名为 tom-blog）
+  base: '/tom-blog/',
   port: 5172,
   // 访问密码与联系手机号（纯前端密码锁，阻挡直接访问）
   // 手机号显示在密码锁页面，用于访客联系你获取密码
