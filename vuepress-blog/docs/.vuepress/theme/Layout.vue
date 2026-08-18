@@ -73,8 +73,8 @@ const route = useRoute()
 
 const { isDark, initDarkMode, toggleDarkMode } = useDarkMode()
 
-// 站点 logo（themeConfig 可能为空，安全读取）
-const siteLogo = computed(() => siteData.value.themeConfig?.logo || '/logo.svg')
+// 站点 logo（themeConfig 可能为空，安全读取，加 base 前缀避免 404）
+const siteLogo = computed(() => siteData.value.themeConfig?.logo || '/tom-blog/logo.svg')
 
 // 固定导航项（极简博客导航）
 const navItems = [

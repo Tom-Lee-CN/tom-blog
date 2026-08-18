@@ -22,7 +22,7 @@ export default defineUserConfig({
     })
   ],
   templateBuild: path.resolve(__dirname, './theme/templates/build.html'),
-  head: [['link', { rel: 'icon', href: '/favicon.svg' }]],
+  head: [['link', { rel: 'icon', href: '/tom-blog/favicon.svg' }]],
   lang: 'zh-CN',
   title: '码霖汤姆的博客',
   description: '个人技术博客',
